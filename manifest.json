@@ -5,5 +5,12 @@
   "developer_name": "julenb",
   "icon": "images/icon.png",
   "preferences": [
+    {
+      "id": "uhash",
+      "type": "keyword",
+      "name": "UHash",
+      "description": "UHash",
+      "default_value": "sha"
+    }
   ]
 }
