@@ -1,0 +1,9 @@
+{
+  "required_api_version": "^2.0.0",
+  "name": "UHash",
+  "description": "Create hashes rapidly",
+  "developer_name": "julenb",
+  "icon": "images/icon.png",
+  "preferences": [
+  ]
+}
