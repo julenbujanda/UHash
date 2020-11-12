@@ -38,6 +38,7 @@ class KeywordQueryEventListener(EventListener):
 
         return RenderResultListAction(items)
 
+#TODO: copy hash on enter key
 
 if __name__ == '__main__':
     DemoExtension().run()
