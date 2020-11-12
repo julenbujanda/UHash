@@ -31,7 +31,10 @@ class KeywordQueryEventListener(EventListener):
                                          name='SHA3-256',
                                          description=hashlib.sha3_256(query.encode('utf-8')).hexdigest(),
                                          on_enter=HideWindowAction()))
-
+        items.append(ExtensionResultItem(icon='images/icon.png',
+                                         name='SHA3-512',
+                                         description=hashlib.sha3_512(query.encode('utf-8')).hexdigest(),
+                                         on_enter=HideWindowAction()))
 
         return RenderResultListAction(items)
 
