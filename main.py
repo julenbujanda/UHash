@@ -24,22 +24,23 @@ class KeywordQueryEventListener(EventListener):
         sha256 = hashlib.sha256(query.encode('utf-8')).hexdigest()
         sha3_256 = description = hashlib.sha3_256(query.encode('utf-8')).hexdigest()
         sha3_512 = hashlib.sha3_512(query.encode('utf-8')).hexdigest()
-        items.append(ExtensionResultItem(icon='images/icon.png',
-                                         name='MD5',
-                                         description=md5,
-                                         on_enter=CopyToClipboardAction(md5)))
-        items.append(ExtensionResultItem(icon='images/icon.png',
-                                         name='SHA256',
-                                         description=sha256,
-                                         on_enter=CopyToClipboardAction(sha256)))
-        items.append(ExtensionResultItem(icon='images/icon.png',
-                                         name='SHA3-256',
-                                         description=sha3_256,
-                                         on_enter=CopyToClipboardAction(sha3_256)))
-        items.append(ExtensionResultItem(icon='images/icon.png',
-                                         name='SHA3-512',
-                                         description=sha3_512,
-                                         on_enter=CopyToClipboardAction(sha3_512)))
+        if query:
+            items.append(ExtensionResultItem(icon='images/icon.png',
+                                             name='MD5',
+                                             description=md5,
+                                             on_enter=CopyToClipboardAction(md5)))
+            items.append(ExtensionResultItem(icon='images/icon.png',
+                                             name='SHA256',
+                                             description=sha256,
+                                             on_enter=CopyToClipboardAction(sha256)))
+            items.append(ExtensionResultItem(icon='images/icon.png',
+                                             name='SHA3-256',
+                                             description=sha3_256,
+                                             on_enter=CopyToClipboardAction(sha3_256)))
+            items.append(ExtensionResultItem(icon='images/icon.png',
+                                             name='SHA3-512',
+                                             description=sha3_512,
+                                             on_enter=CopyToClipboardAction(sha3_512)))
 
         return RenderResultListAction(items)
 
